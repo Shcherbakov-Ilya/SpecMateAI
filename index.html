@@ -8,7 +8,199 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="SpecMate AI — ТЗ сразу после встречи с клиентом">
 <meta property="og:description" content="Локальный AI-агент для presale- и PM-команд: техническое задание, риски, дорожная карта и оценка стоимости из записи встречи.">
-<meta property="og:image" content="img/laptop-chat-dark.png">
+<meta property="og:image" content="https://shcherbakov-ilya.github.io/SpecMateAI/img/laptop-chat-dark.png">
+<meta property="og:image:alt" content="Интерфейс SpecMate AI: чат проекта и документы">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shcherbakov-ilya.github.io/SpecMateAI/">
+<meta property="og:site_name" content="SpecMate AI">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Щербаков Илья Игоревич">
+<link rel="canonical" href="https://shcherbakov-ilya.github.io/SpecMateAI/">
+<link rel="alternate" type="text/plain" href="llms.txt" title="Описание SpecMate AI для ИИ-агентов">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://shcherbakov-ilya.github.io/SpecMateAI/#app",
+   "name": "SpecMate AI",
+   "alternateName": [
+    "SpecMate",
+    "SpecMate AI — ТЗ по записи встречи с клиентом"
+   ],
+   "url": "https://shcherbakov-ilya.github.io/SpecMateAI/",
+   "description": "Локальный AI-агент для presale- и PM-команд: по записи встречи с клиентом готовит техническое задание, риски с обоснованием, дорожную карту и оценку стоимости с опорой на базу знаний компании. Работает без облачных API.",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Генерация технических заданий по записи встреч",
+   "inLanguage": "ru",
+   "image": "https://shcherbakov-ilya.github.io/SpecMateAI/img/laptop-chat-dark.png",
+   "screenshot": [
+    "https://shcherbakov-ilya.github.io/SpecMateAI/img/laptop-chat-dark.png",
+    "https://shcherbakov-ilya.github.io/SpecMateAI/img/laptop-kb-dark.png"
+   ],
+   "featureList": [
+    "Транскрибация аудио- и видеозаписей встреч с разделением по участникам",
+    "Генерация технического задания по записи встречи",
+    "Риски с обоснованием и ссылкой на базу знаний компании",
+    "Дорожная карта и сроки проекта",
+    "Предварительная оценка стоимости",
+    "База знаний компании: Word, PDF, TXT",
+    "Документы по шаблону ТЗ компании",
+    "Обработка 19-минутной встречи за 2–3 минуты на ноутбуке",
+    "Инкрементальное обновление документа по новым встречам",
+    "Полностью локальная обработка без облачных API",
+    "Экспорт в Word и PDF"
+   ],
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Presale-менеджеры, бизнес-аналитики, project- и delivery-менеджеры IT-интеграторов, аутсорс-разработки, digital-агентств и PMO"
+   },
+   "creator": {
+    "@id": "https://shcherbakov-ilya.github.io/#ilya"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://shcherbakov-ilya.github.io/#ilya",
+   "name": "Щербаков Илья Игоревич",
+   "url": "https://shcherbakov-ilya.github.io/",
+   "jobTitle": "Директор по автоматизации и цифровизации бизнеса",
+   "sameAs": [
+    "https://t.me/sherbakov_Ilya"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://shcherbakov-ilya.github.io/SpecMateAI/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Что такое SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SpecMate AI — локальный AI-агент, который по записи встречи с клиентом готовит техническое задание, перечень рисков с обоснованием, дорожную карту проекта и предварительную оценку стоимости. Агент опирается на базу знаний вашей компании: документацию продуктов, технические ограничения и прошлые ТЗ. Работает на ноутбуке или сервере компании, без облачных сервисов."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Как составить техническое задание по записи встречи с клиентом с помощью ИИ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "В SpecMate AI это четыре шага. Вы загружаете аудио- или видеозапись встречи и заметки менеджера. Агент расшифровывает речь и разделяет реплики по участникам, сверяет требования с базой знаний компании и формирует ТЗ, риски, дорожную карту и оценку стоимости в формате Word и PDF. Аналитику остаётся проверить и доработать готовый черновик."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Сколько времени занимает обработка встречи?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Запись встречи на 19 минут превращается в готовый комплект документов за 2–3 минуты, если база знаний уже заполнена. Для часовой встречи, по нашей оценке, — до 10 минут. Замеры сделаны на ноутбуке с видеокартой NVIDIA RTX 5050 (8 ГБ видеопамяти), процессором AMD Ryzen 7 и 16 ГБ оперативной памяти."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Чем SpecMate AI отличается от сервисов протоколов встреч?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Сервисы вроде mymeet.ai, MeetScribe, Fireflies.ai и Otter.ai расшифровывают встречу и делают протокол: итоги, договорённости, задачи. SpecMate AI превращает встречу в проектные документы: техническое задание, риски со ссылкой на источник, дорожную карту и оценку стоимости. Требования при этом сверяются с базой знаний вашей компании, а вся обработка идёт локально."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Уходят ли записи встреч и документы в облако?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Нет. Распознавание речи, анализ и генерация документов выполняются локально, без облачных сервисов и сторонних AI-API. После внедрения SpecMate AI работает на вашем оборудовании, и записи встреч, база знаний и готовые документы не покидают ваш контур. Во время пилота записи обрабатываются на нашем оборудовании по NDA — тоже без облака — и удаляются по окончании пилота."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Какое оборудование нужно для SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SpecMate AI устанавливается на ноутбук среднего класса, выделенный сервер не обязателен. Решение разработано и проверено на ноутбуке с видеокартой NVIDIA RTX 5050 (8 ГБ видеопамяти), процессором AMD Ryzen 7 и 16 ГБ оперативной памяти. Для пилота оборудование не нужно: обработку мы проводим на своём."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Какие данные можно загрузить в SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Аудио- или видеозапись встречи с клиентом, текстовые заметки менеджера и документы базы знаний в форматах Word, PDF и TXT. Поддерживаются аудио MP3, WAV, M4A, OGG, FLAC и видео MP4, MOV, MKV, WEBM. Ограничения на длительность записи нет. Документы базы знаний привязываются к продукту и используются во всех его проектах."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Что получается на выходе?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Комплект документов по проекту: техническое задание с требованиями клиента, риски с обоснованием и ссылкой на базу знаний, дорожная карта с этапами и сроками, предварительная оценка стоимости и варианты оптимизации решения. Документ скачивается в формате Word или PDF. Обоснования каждого пункта сохраняются в логах и не засоряют сам документ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Можно ли использовать собственный шаблон ТЗ компании?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Да. Шаблон спецификации загружается в базу знаний, и агент формирует документы по проекту по этой структуре. Так все ТЗ соответствуют стандарту компании независимо от того, кто проводил встречу."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Может ли ИИ написать ТЗ без участия аналитика?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SpecMate AI готовит полноценный черновик, но решение остаётся за человеком: аналитик или presale-менеджер проверяет документ, уточняет спорные места и согласует его с клиентом. Агент снимает рутину — разбор записи, структурирование требований, первичную оценку рисков — и делает ТЗ единообразными независимо от автора."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Что происходит, если по проекту было несколько встреч?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Агент работает инкрементально: после новой встречи он обновляет действующую версию документа, а не обрабатывает всю историю заново. В проект можно добавить новую запись или дополнить его текстом."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Кому подходит SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Командам, которые превращают встречи с клиентами в проекты: presale-менеджерам и бизнес-аналитикам IT-интеграторов (внедрение 1С, CRM, ERP), project- и delivery-менеджерам аутсорс-разработки, руководителям digital- и консалтинговых агентств и внутренних PMO."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "На каком языке должны проходить встречи?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Сейчас SpecMate AI работает со встречами на русском языке."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Как попробовать SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Мы набираем пилотные компании. Пилот бесплатный: мы настраиваем SpecMate AI под ваши продукты и процессы на ваших реальных данных и показываем результат. Подписываем NDA, вы передаёте до 5 записей встреч с клиентами и документы для базы знаний: документацию продуктов, шаблон ТЗ, примеры прошлых ТЗ. Мы обрабатываем их на своём оборудовании без облака, адаптируем SpecMate AI под ваши задачи и проводим демонстрацию готовых документов у вас в офисе или онлайн. В обмен просим отзыв и разрешение упоминать компанию как пилотную. Заявку можно оставить в Telegram: @sherbakov_Ilya."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Сколько стоит SpecMate AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Сейчас идёт набор пилотных компаний, и пилот бесплатный. Условия коммерческого использования обсуждаем индивидуально по итогам пилота."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -95,6 +287,17 @@ footer{margin-top:120px;border-top:1px solid var(--border);padding:36px 0;font-s
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:980px){.menu{display:none}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr;gap:40px}}
 @media (max-width:640px){.g4,.g3,.g2{grid-template-columns:1fr}.nav .btn{display:none}.founder{flex-direction:column;align-items:flex-start;padding:28px}.founder img{width:140px;height:140px}th,td{padding:14px}table{font-size:14px}section{padding-top:80px}}
+.faq{display:flex;flex-direction:column;gap:12px;max-width:920px}
+.faq details{border-radius:16px;background:var(--panel);border:1px solid var(--border);transition:border-color .2s}
+.faq details[open]{border-color:var(--purple)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{margin:0;font-size:17px;font-weight:600;line-height:1.4}
+.faq summary::after{content:"+";flex-shrink:0;font-family:Unbounded,sans-serif;font-size:24px;line-height:1;color:var(--lime);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 28px 24px;display:flex;flex-direction:column;gap:10px}
+.faq .a p{margin:0;font-size:16px;line-height:1.6;color:var(--soft);max-width:780px}
+@media (max-width:640px){.faq summary{padding:18px 20px}.faq summary h3{font-size:16px}.faq .a{padding:0 20px 20px}}
 </style>
 </head>
 <body>
@@ -103,7 +306,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <a href="#top" class="logo">
 <svg width="30" height="30" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M13 5h25l15 15v35a4 4 0 0 1-4 4H13a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" stroke="var(--logo)" stroke-width="4" stroke-linejoin="round"/><path d="M38 5v11a4 4 0 0 0 4 4h11z" fill="var(--logo)" opacity=".75"/><g stroke="var(--logo)" stroke-width="1.6"><path d="M18 22l19 5M18 22l-2 14M18 22l14 14M37 27l-5 9M37 27l6 7M16 36l16 0M16 36l17 7M32 36l11-2M32 36l-2 11M16 36l1 15M17 51l13-4M30 47l3-4"/></g><g fill="var(--logo)"><circle cx="18" cy="22" r="3.6"/><circle cx="37" cy="27" r="3.4"/><circle cx="43" cy="34" r="2.6"/><circle cx="16" cy="36" r="3.6"/><circle cx="32" cy="36" r="2.4"/><circle cx="33" cy="43" r="3.2"/><circle cx="30" cy="47" r="3.2"/><circle cx="17" cy="51" r="3"/></g><path d="M30 50l7 7 17-18" stroke="var(--logo-check)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 <span>SpecMate <span class="ai">AI</span></span></a>
-<nav class="menu"><a href="#how">Как это работает</a><a href="#features">Возможности</a><a href="#audience">Для кого</a><a href="#contact">Контакты</a></nav>
+<nav class="menu"><a href="#how">Как это работает</a><a href="#features">Возможности</a><a href="#audience">Для кого</a><a href="#faq">FAQ</a><a href="#contact">Контакты</a></nav>
 <div class="right">
 <button class="icon-btn" id="theme" type="button" aria-label="Переключить тему">
 <svg class="td" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -170,7 +373,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="card"><div class="mark"></div><b>Полностью локально</b><p>Обработка без обращения к внешним облачным API.</p></div>
 <div class="card"><div class="mark"></div><b>Работает на ноутбуке</b><p>Устанавливается на ноутбук среднего класса, а не только на выделенный сервер.</p></div>
 <div class="card"><div class="mark"></div><b>База знаний компании</b><p>Документы Word, PDF и TXT привязываются к продукту и доступны всем его проектам.</p></div>
-<div class="card"><div class="mark"></div><b>Единый стандарт ТЗ</b><p>Документ одной структуры независимо от автора.</p></div>
+<div class="card"><div class="mark"></div><b>Единый стандарт ТЗ</b><p>Документ по шаблону вашей компании — одной структуры независимо от автора.</p></div>
 <div class="card"><div class="mark"></div><b>Инкрементальная работа</b><p>При повторных встречах по проекту агент обновляет действующую версию документа, а не переобрабатывает всю историю.</p></div>
 <div class="card"><div class="mark"></div><b>Прозрачные решения</b><p>Обоснования каждого пункта доступны в логах и не засоряют сам документ.</p></div>
 </div>
@@ -210,6 +413,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div>
 </section>
 
+<section data-section="faq" id="faq">
+<div class="head"><div class="eyebrow">Вопросы и ответы</div><h2>Частые вопросы о SpecMate AI</h2></div>
+<div class="faq">
+<details open><summary><h3>Что такое SpecMate AI?</h3></summary><div class="a"><p>SpecMate AI — локальный AI-агент, который по записи встречи с клиентом готовит техническое задание, перечень рисков с обоснованием, дорожную карту проекта и предварительную оценку стоимости.</p><p>Агент опирается на базу знаний вашей компании: документацию продуктов, технические ограничения и прошлые ТЗ. Работает на ноутбуке или сервере компании, без облачных сервисов.</p></div></details>
+<details><summary><h3>Как составить техническое задание по записи встречи с клиентом с помощью ИИ?</h3></summary><div class="a"><p>В SpecMate AI это четыре шага. Вы загружаете аудио- или видеозапись встречи и заметки менеджера. Агент расшифровывает речь и разделяет реплики по участникам, сверяет требования с базой знаний компании и формирует ТЗ, риски, дорожную карту и оценку стоимости в формате Word и PDF.</p><p>Аналитику остаётся проверить и доработать готовый черновик.</p></div></details>
+<details><summary><h3>Сколько времени занимает обработка встречи?</h3></summary><div class="a"><p>Запись встречи на 19 минут превращается в готовый комплект документов за 2–3 минуты, если база знаний уже заполнена. Для часовой встречи, по нашей оценке, — до 10 минут.</p><p>Замеры сделаны на ноутбуке с видеокартой NVIDIA RTX 5050 (8 ГБ видеопамяти), процессором AMD Ryzen 7 и 16 ГБ оперативной памяти.</p></div></details>
+<details><summary><h3>Чем SpecMate AI отличается от сервисов протоколов встреч?</h3></summary><div class="a"><p>Сервисы вроде mymeet.ai, MeetScribe, Fireflies.ai и Otter.ai расшифровывают встречу и делают протокол: итоги, договорённости, задачи.</p><p>SpecMate AI превращает встречу в проектные документы: техническое задание, риски со ссылкой на источник, дорожную карту и оценку стоимости. Требования при этом сверяются с базой знаний вашей компании, а вся обработка идёт локально.</p></div></details>
+<details><summary><h3>Уходят ли записи встреч и документы в облако?</h3></summary><div class="a"><p>Нет. Распознавание речи, анализ и генерация документов выполняются локально, без облачных сервисов и сторонних AI-API.</p><p>После внедрения SpecMate AI работает на вашем оборудовании, и записи встреч, база знаний и готовые документы не покидают ваш контур. Во время пилота записи обрабатываются на нашем оборудовании по NDA — тоже без облака — и удаляются по окончании пилота.</p></div></details>
+<details><summary><h3>Какое оборудование нужно для SpecMate AI?</h3></summary><div class="a"><p>SpecMate AI устанавливается на ноутбук среднего класса, выделенный сервер не обязателен. Решение разработано и проверено на ноутбуке с видеокартой NVIDIA RTX 5050 (8 ГБ видеопамяти), процессором AMD Ryzen 7 и 16 ГБ оперативной памяти.</p><p>Для пилота оборудование не нужно: обработку мы проводим на своём.</p></div></details>
+<details><summary><h3>Какие данные можно загрузить в SpecMate AI?</h3></summary><div class="a"><p>Аудио- или видеозапись встречи с клиентом, текстовые заметки менеджера и документы базы знаний в форматах Word, PDF и TXT.</p><p>Поддерживаются аудио MP3, WAV, M4A, OGG, FLAC и видео MP4, MOV, MKV, WEBM. Ограничения на длительность записи нет. Документы базы знаний привязываются к продукту и используются во всех его проектах.</p></div></details>
+<details><summary><h3>Что получается на выходе?</h3></summary><div class="a"><p>Комплект документов по проекту: техническое задание с требованиями клиента, риски с обоснованием и ссылкой на базу знаний, дорожная карта с этапами и сроками, предварительная оценка стоимости и варианты оптимизации решения.</p><p>Документ скачивается в формате Word или PDF. Обоснования каждого пункта сохраняются в логах и не засоряют сам документ.</p></div></details>
+<details><summary><h3>Можно ли использовать собственный шаблон ТЗ компании?</h3></summary><div class="a"><p>Да. Шаблон спецификации загружается в базу знаний, и агент формирует документы по проекту по этой структуре.</p><p>Так все ТЗ соответствуют стандарту компании независимо от того, кто проводил встречу.</p></div></details>
+<details><summary><h3>Может ли ИИ написать ТЗ без участия аналитика?</h3></summary><div class="a"><p>SpecMate AI готовит полноценный черновик, но решение остаётся за человеком: аналитик или presale-менеджер проверяет документ, уточняет спорные места и согласует его с клиентом.</p><p>Агент снимает рутину — разбор записи, структурирование требований, первичную оценку рисков — и делает ТЗ единообразными независимо от автора.</p></div></details>
+<details><summary><h3>Что происходит, если по проекту было несколько встреч?</h3></summary><div class="a"><p>Агент работает инкрементально: после новой встречи он обновляет действующую версию документа, а не обрабатывает всю историю заново.</p><p>В проект можно добавить новую запись или дополнить его текстом.</p></div></details>
+<details><summary><h3>Кому подходит SpecMate AI?</h3></summary><div class="a"><p>Командам, которые превращают встречи с клиентами в проекты: presale-менеджерам и бизнес-аналитикам IT-интеграторов (внедрение 1С, CRM, ERP), project- и delivery-менеджерам аутсорс-разработки, руководителям digital- и консалтинговых агентств и внутренних PMO.</p></div></details>
+<details><summary><h3>На каком языке должны проходить встречи?</h3></summary><div class="a"><p>Сейчас SpecMate AI работает со встречами на русском языке.</p></div></details>
+<details><summary><h3>Как попробовать SpecMate AI?</h3></summary><div class="a"><p>Мы набираем пилотные компании. Пилот бесплатный: мы настраиваем SpecMate AI под ваши продукты и процессы на ваших реальных данных и показываем результат.</p><p>Подписываем NDA, вы передаёте до 5 записей встреч с клиентами и документы для базы знаний: документацию продуктов, шаблон ТЗ, примеры прошлых ТЗ. Мы обрабатываем их на своём оборудовании без облака, адаптируем SpecMate AI под ваши задачи и проводим демонстрацию готовых документов у вас в офисе или онлайн. В обмен просим отзыв и разрешение упоминать компанию как пилотную. Заявку можно оставить в Telegram: @sherbakov_Ilya.</p></div></details>
+<details><summary><h3>Сколько стоит SpecMate AI?</h3></summary><div class="a"><p>Сейчас идёт набор пилотных компаний, и пилот бесплатный. Условия коммерческого использования обсуждаем индивидуально по итогам пилота.</p></div></details>
+</div>
+</section>
+
 <section data-section="contact" id="contact">
 <div class="head"><div class="eyebrow">Контакты</div><h2>Обсудим ваш проект</h2><p class="lead" style="text-align:left">Выберите, что вам ближе, — откроется Telegram с готовым сообщением.</p></div>
 <div class="grid g3">
@@ -225,7 +449,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 </main>
 
-<footer><div class="wrap"><span class="logo" style="font-size:16px"><svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M13 5h25l15 15v35a4 4 0 0 1-4 4H13a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" stroke="var(--logo)" stroke-width="4" stroke-linejoin="round"/><path d="M38 5v11a4 4 0 0 0 4 4h11z" fill="var(--logo)" opacity=".75"/><g stroke="var(--logo)" stroke-width="1.6"><path d="M18 22l19 5M18 22l-2 14M18 22l14 14M37 27l-5 9M37 27l6 7M16 36l16 0M16 36l17 7M32 36l11-2M32 36l-2 11M16 36l1 15M17 51l13-4M30 47l3-4"/></g><g fill="var(--logo)"><circle cx="18" cy="22" r="3.6"/><circle cx="37" cy="27" r="3.4"/><circle cx="43" cy="34" r="2.6"/><circle cx="16" cy="36" r="3.6"/><circle cx="32" cy="36" r="2.4"/><circle cx="33" cy="43" r="3.2"/><circle cx="30" cy="47" r="3.2"/><circle cx="17" cy="51" r="3"/></g><path d="M30 50l7 7 17-18" stroke="var(--logo-check)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>SpecMate <span class="ai">AI</span></span><span>© 2026 SpecMate AI · Щербаков Илья Игоревич</span></div></footer>
+<footer><div class="wrap"><span class="logo" style="font-size:16px"><svg width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M13 5h25l15 15v35a4 4 0 0 1-4 4H13a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" stroke="var(--logo)" stroke-width="4" stroke-linejoin="round"/><path d="M38 5v11a4 4 0 0 0 4 4h11z" fill="var(--logo)" opacity=".75"/><g stroke="var(--logo)" stroke-width="1.6"><path d="M18 22l19 5M18 22l-2 14M18 22l14 14M37 27l-5 9M37 27l6 7M16 36l16 0M16 36l17 7M32 36l11-2M32 36l-2 11M16 36l1 15M17 51l13-4M30 47l3-4"/></g><g fill="var(--logo)"><circle cx="18" cy="22" r="3.6"/><circle cx="37" cy="27" r="3.4"/><circle cx="43" cy="34" r="2.6"/><circle cx="16" cy="36" r="3.6"/><circle cx="32" cy="36" r="2.4"/><circle cx="33" cy="43" r="3.2"/><circle cx="30" cy="47" r="3.2"/><circle cx="17" cy="51" r="3"/></g><path d="M30 50l7 7 17-18" stroke="var(--logo-check)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>SpecMate <span class="ai">AI</span></span><span>© 2026 SpecMate AI — ТЗ по записи встречи с клиентом · <a href="https://shcherbakov-ilya.github.io/" style="text-decoration:underline">Щербаков Илья Игоревич</a></span></div></footer>
 
 <script>
 (function(){
@@ -292,6 +516,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     active++;
     tmarks.forEach(function(t){ if(active===t[0]) goal(t[1]); });
   },1000);
+  // 5. Какие вопросы FAQ открывают: цель faq_open с текстом вопроса
+  document.querySelectorAll('.faq details').forEach(function(d){
+    d.addEventListener('toggle',function(){
+      if(d.open) goal('faq_open',{question:d.querySelector('h3').textContent});
+    });
+  });
 })();
 </script>
 </body>
